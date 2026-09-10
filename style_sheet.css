@@ -1,69 +1,105 @@
+:root {
+    --height: 100%;
+}
+
 body {
-    background-color: rgb(15, 0, 0);
+    background-color: rgb(20, 0, 0);
     margin: 0%;
 }
 
+#background_colour {
+    background-color: rgb(15, 0, 0);
+    margin: 0%;
+    background: linear-gradient(45deg,#150000,
+                                    #150000,
+                                    #150000,
+                                    #150000,
+                                    #150000,
+                                    #4b0505,
+                                    #150000,
+                                    #150000,
+                                    #150000,
+                                    #150000,
+                                    #150000);
+    background-size:300% auto;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    animation: background_movement 15s linear infinite;
+}
+
+@keyframes background_movement {
+    0%{background-position: 0% center;}
+    100%{background-position: 300% center;}
+}
+
 #overbar {
-    background-color: maroon;
+    background-color: rgb(29, 22, 22);
     margin-top: 0px;
     width: 100%;
-    height: 50px;
+    height: 70px;
     position: fixed;
-    padding-left: 100px;
+    padding-left: 50px;
     text-align: left;
-    font-size: 20px;
+    font-size: 40px;
     color: white;
     z-index: 999;
     margin-left: 50%;
     translate: -50%;
 }
 
-#body_settings {
+#pfp {
+    border-radius: 50%;
+    width: 50px;
+    margin-top: 10px;
+    transition: 0.5s;
+    transform: scale(1)
+}
+
+#pfp:hover {
+    transition: 0.5s;
+    transform: scale(1.1)
+}
+
+#background_bar {
     position: absolute;
     left: 50%;
     translate: -50%;
     padding-top: 40px;
+    align-items: center;
     background-color: rgb(44, 44, 44);
+    max-width: 1000px;
+    height: 100vh;
+    width: 90%;
+    padding-bottom: 75px;
+    position: fixed;
+}
+
+#body_settings {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    padding-top: 100px;
+    align-items: center;
     max-width: 1000px;
     width: 90%;
     padding-bottom: 75px;
     position: absolute;
 }
 
-
-
-#main_title {
-    font-size: 30px;
-    text-align: center;
-    color: white; 
+#Intro_title {
+    font-size: 25px;
 }
 
-
-#autobiography_title, #projects_title, #background_title, #awards_title {
-    text-align: center;
-    font-size: 20px;
-}
-
-#autobiography_title, #background_title #projects_title, #awards_title {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    max-width: 300px;
-    background-color: rgb(167, 167, 167);
-    border-radius: 50%;
-}
-
-#projects_title, #awards_title {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: rgb(167, 167, 167);
-    border-radius: 50%;
-}
 #Introduction {
     font-size: 20px;
     font-style: italic;
-    padding: 20px;
     background-color: rgb(224, 224, 224);
-    border-radius: 20%;
+    border-radius: 30px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 85%;
 
     position: fixed;
@@ -71,34 +107,90 @@ body {
     translate: -50%;
 }
 
-#block_main_text_left {
+#Node_Container {
     font-size: 20px;
     font-style: italic;
-    padding: 20px;
-    background-color: rgb(224, 224, 224);
-    border-radius: 20%;
+    border-radius: 30px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 85%;
+    margin-left: -20px;
+    margin-top: 220px;
 
     position: fixed;
     left: 50%;
     translate: -50%;
 }
 
-#block_main_text_right {
-    font-size: 13px;
+#Node_Title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#Node_Content {
+    text-align: center;
+}
+
+#Node-1 {
+    font-size: 20px;
     font-style: italic;
-    padding: 20px;
     background-color: rgb(224, 224, 224);
-    border-radius: 10%;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    
+    transform: scale(1);
+    transition: 0.3s;
 }
 
-#block_of_text_left {
-    margin-left: 10px;
-    margin-right: 10px;
+#Node-1:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
-#block_of_text_right {
-    padding: 10px;
-    width: 40%;
-    margin-left: auto;
-    margin-right: 0px;
+#Node-2 {
+    font-size: 20px;
+    font-style: italic;
+    background-color: rgb(224, 224, 224);
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    
+    transform: scale(1);
+    transition: 0.3s;
+}
+
+@keyframes Node-2-animation {
+    50% {transform: translateY(-10px);}
+}
+
+#Node-2:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+#Projects {
+    font-size: 20px;
+    font-style: italic;
+    background-color: rgb(224, 224, 224);
+    border-radius: 30px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 85%;
+    margin-top: 400px;
+
+    position: fixed;
+    left: 50%;
+    translate: -50%;
 }

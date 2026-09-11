@@ -1,8 +1,41 @@
+/* --------------------------- */
+/* Project: Personal Website   */
+/* Author: Daniel Ferreira     */
+/* Created: 06/09/2026         */
+/* Last Updated: 11/09/2026    */
+/* --------------------------- */
+
+:root {
+    --barBackgroundColor: rgb(44, 44, 44);
+    --nodeBackgroundColor: rgb(224, 224, 224);
+    --nodeTextColor: black;
+    --theme: light;
+}
+
 body {
     background-color: rgb(20, 0, 0);
     margin: 0%;
 }
 
+/* URL Customisation */
+a:link {
+  color: maroon;
+  font-weight: bold;
+}
+
+a:visited {
+  color: rgb(82, 0, 0);
+}
+
+a:hover {
+  color: rgb(165, 0, 0);
+}
+
+a:active {
+  color: red;
+}
+
+/* Animated Background Customisation */
 #background_colour {
     background-color: rgb(15, 0, 0);
     margin: 0%;
@@ -29,16 +62,16 @@ body {
     100%{background-position: 300% center;}
 }
 
+/* Overbar Customisation */
 #overbar {
     background-color: rgb(29, 22, 22);
     margin-top: 0px;
     width: 100%;
-    height: 70px;
+    height: 90px;
     position: fixed;
     padding-left: 50px;
     text-align: left;
     font-size: 40px;
-    color: white;
     z-index: 999;
     margin-left: 50%;
     translate: -50%;
@@ -46,10 +79,11 @@ body {
 
 #pfp {
     border-radius: 50%;
-    width: 50px;
-    margin-top: 10px;
+    width: 60px;
+    margin-top: 15px;
     transition: 0.5s;
     animation: levitate_back 0.5s linear;
+    position: absolute;
 }
 
 #pfp:hover {
@@ -77,11 +111,12 @@ body {
 }
 
 #the_name {
-    position: relative;
+    position: absolute;
     margin-left: 80px;
-    margin-top: -60px;
+    margin-top: 20px;
     color: white;
-    width: 250px
+    width: 275px;
+    font-size: 45px;
 }
 
 #the_name:hover {
@@ -111,13 +146,39 @@ body {
     100%{ background-position:150% center; }
 }
 
+#themeButton {
+    background-color: rgb(39, 32, 32);
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 50%;
+    position: relative;
+    float: right;
+    margin-top: 13px;
+    margin-right: 40px;
+    
+    transform: scale(1);
+    transition: 0.4s;
+}
+
+#themeButton:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#themeButtonIcon {
+    width: 50px;
+    padding: 0px;
+}
+
+/* Main Body Colour */
 #background_bar {
     position: absolute;
     left: 50%;
     translate: -50%;
     padding-top: 40px;
     align-items: center;
-    background-color: rgb(44, 44, 44);
+    background-color: var(--barBackgroundColor);
     max-width: 1000px;
     height: 100vh;
     width: 90%;
@@ -125,6 +186,7 @@ body {
     position: fixed;
 }
 
+/* Main Body | Main Container */
 #body_settings {
     position: absolute;
     left: 50%;
@@ -140,16 +202,19 @@ body {
     position: absolute;
 }
 
-#Intro_Title {
-    font-size: 30px;
-    font-weight: bold;
+/* Customisation of Information Nodes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 #Introduction {
     opacity: 0;
-    font-size: 22px;
+    font-size: 25px;
     font-style: italic;
-    background-color: rgb(224, 224, 224);
+    background-color: var(--nodeBackgroundColor);
+    color: var(--nodeTextColor);
     border-radius: 30px;
     padding-top: 15px;
     padding-bottom: 30px;
@@ -158,48 +223,55 @@ body {
     width: 85%;
     animation: fadeIn 1s forwards;
     animation-delay: 0.1s;
+    margin-top: 15px;
+    box-shadow: 10px 10px 5px rgb(34, 34, 34);
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+#Intro_Title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 #Node_Container {
     font-size: 20px;
     font-style: italic;
-    padding-top: 0px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 85%;
-    margin-top: 20px;
+    display: flex;
+    margin: 20px auto 0;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    max-width: 1000px;
+    margin-top: 50px;
+    color: var(--nodeTextColor);
 }
 
 #Node_Title {
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 #Node_Content {
     text-align: center;
+    font-size: 24px;
 }
 
 #Node-1 {
     opacity: 0;
-    font-size: 20px;
     font-style: italic;
-    background-color: rgb(224, 224, 224);
+    background-color: var(--nodeBackgroundColor);
     border-radius: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    width: 85%;
-    margin-top: 30px;
+    text-align: center;
+    width: 250px;
+    height: 250px;
     animation: fadeIn 1s forwards;
     animation-delay: 0.4s;
+    box-shadow: 10px 10px 5px rgb(34, 34, 34);
     
     
     transform: scale(1);
@@ -215,29 +287,29 @@ body {
     opacity: 0;
     font-size: 20px;
     font-style: italic;
-    background-color: rgb(224, 224, 224);
+    background-color: var(--nodeBackgroundColor);
     border-radius: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    width: 85%;
-    margin-top: 20px;
+    text-align: center;
+    width: 250px;
+    height: 250px;
     animation: fadeIn 1s forwards;
     animation-delay: 0.7s;
+    box-shadow: 10px 10px 5px rgb(34, 34, 34);
     
     transform: scale(1);
     transition: 0.4s;
-}
-
-@keyframes Node-2-animation {
-    50% {transform: translateY(-10px);}
 }
 
 #Node-2:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
+
+
 
 
 #Projects {

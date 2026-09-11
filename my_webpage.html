@@ -3,9 +3,8 @@
     <head>
         <title>Daniel Ferreira | </title>
         <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-        <link rel="stylesheet" href="style_sheet.css" type="text/css">
-        <script src="script_file.js"></script>
-
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <script src="script.js"></script>
     </head>
 
     <body>
@@ -13,41 +12,44 @@
         <div id="overbar">
             <img src="Images/pfp.PNG" id="pfp">
             <div id="the_name">Daniel Ferreira</div>
+            <button type="button" id="themeButton" onClick="changeTheme()"><img src="Images/sun.png" id="themeButtonIcon"></button>
         </div>
         <div id="background_bar"></div>
 
         <div id="body_settings">
             <div id="Introduction">
-                <div id="Intro_Title">Introduction</div><br>
-                My name is Daniel Ferreira, a Computer 
-                Science student, studying at The University 
-                Of Manchester. 
+                <div id="Intro_Title">Introduction</div>
+                My name is Daniel Ferreira, a <u>Computer 
+                Science</u> student, studying at <u>The University 
+                Of Manchester</u>.
                 My interests include vehicle restauration and repairs, electronics, programming, aswell 
-                as exploring the vast world of network communications.<br>
+                as exploring the vast world of network communications and software development.<br>
                 This website was created to aid employers in discovering more about me.
             </div>
             
-            
+            <div id="Node_Container">
                 <div id="Node-1">
-                    <div id="Node_Title">Projects:</div>
+                    <div id="Node_Title">Projects:</div><br>
                     <div id="Node_Content">
-                        My projects can be found in my GitHub account, through the following link:
+                        My projects, including this website, can be found in my <u>GitHub</u> account, through the following link:
                         <a href="https://github.com/KitDino" id="ghButton" class="Node-1-animation" target="_blank">GitHub</a>
                     </div>
                 </div>
                 <br>
 
                 <div id="Node-2">
-                    <div id="Node_Title">LinkedIn:</div>
+                    <div id="Node_Title">LinkedIn:</div><br><br>
                     <div id="Node_Content">
-                        Connect with me on LinkedIn, through the following link:
-                        <a href="https://www.linkedin.com/in/daniel-ferreira-306567331/" id="ghButton" target="_blank">LinkedIn</a>
+                        Connect with me on <u>LinkedIn</u>, through the following link:
+                        <a href="https://www.linkedin.com/in/daniel-ferreira-306567331/" id="liButton" target="_blank">LinkedIn</a>
                     </div>
                 </div>
+            </div>
                 
             
 
         </div>
+    <script>checkTheme()</script>
     </body>
 </html>
 
